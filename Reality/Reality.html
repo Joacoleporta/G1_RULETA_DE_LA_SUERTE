@@ -14,11 +14,22 @@
         <h1>SPIN THE WELL TO DETERMINATE YOUR FUTURE</h1>
         <figure class="tentacles">
             <img src="Imagenes_Isaac/Tentaculos.png" alt="SpinWhell">
-            <figcaption>GO !</figcaption>
+            <figcaption>
+                <button id="btnGenerar" onclick="toggleCarousel()">GO !
+ 
+                </button>
+            </figcaption>
+            
             <input type="checkbox" id="btngo">
             <label for="btntwo"></label>
     </section>
 
+
+    <div class="centrado" id="res">
+        <h2 id="resultado">nombre</h2>
+    </div>
+
+    
 
     <section class="carrusel-sec">
             <div class="container" >
@@ -49,6 +60,53 @@
                 </div>
             </div>
     </section>
+    
+
+
+
+
+    <section class="contenedor">
+
+        <img src="" />
+        <div class="resultado">
+
+        </div>
+
+
+        <div class="">
+            <form id="modifyArrayForm">
+                <div class="add">
+                <label id="add" for="addElementInput"></button>
+                </label>
+                <input type="text" id="addElementInput">
+                 </div>
+                <br>
+                 <div class="remove">
+                <label id="remove" for="removeElementInput"></label>
+                <input type="text" id="removeElementInput">
+            </div>
+            </form>
+            <div class="botones">
+                <div class="add"><button type="button" onclick="addElement()">Añadir</button></div>
+                <div class="remove"><button type="button" onclick="removeElement()">Eliminar</button></div>
+            </div>
+            <h2>Participantes del juego</h2>
+
+            <div class="lista">
+                <ul id="nameList"></ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
     <section>
         <div class="btn1">
             <button onclick="toggleCarousel()" class="one">

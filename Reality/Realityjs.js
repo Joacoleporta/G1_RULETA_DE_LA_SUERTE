@@ -101,3 +101,72 @@ function obtenerNombreAleatorio(array) {
     }
     isCarouselRunning = !isCarouselRunning;
   }
+
+
+  /////////////ARRAY NOMBRES/////////////////////
+  const nombres = ["Max", "Alicia","Jose","Mercedes","Jander","Yessi","Anzu", "Neimy","Hanna","Isaac", "Juanjo","David","Paolo","Alba", "Joaco","Alberto","Denisse", "Alfredo","Alfredo", "Marcela","Laudy", "Victor","Yady","Alvaro", "Roxana","Elena"];
+
+const btnGenerar = document.getElementById("btnGenerar");
+const resultado = document.getElementById("resultado");
+
+btnGenerar.addEventListener("click",  function (){
+
+    const nombreAleatorio = obtenerNombreAleatorio(nombres);
+    resultado.textContent = nombreAleatorio;
+});
+
+
+function obtenerNombreAleatorio(array) {
+    const indiceAleatorio = Math.floor(Math.random() * array.length);
+    return array[indiceAleatorio];
+  }
+
+
+
+
+  function renderNames() {
+    const nameList = document.getElementById("nameList");
+  
+    // Limpiar la lista actual
+    nameList.innerHTML = "";
+  
+    // Agregar cada nombre al listado
+    nombres.forEach(name => {
+      const listItem = document.createElement("li");
+      listItem.textContent = name;
+      nameList.appendChild(listItem);
+    });
+  }
+  
+  // Función para agregar un elemento al array
+  function addElement() {
+    const addElementInput = document.getElementById("addElementInput");
+    const newName = addElementInput.value.trim();
+  
+    if (newName !== "") {
+      nombres.push(newName);
+      addElementInput.value = ""; // Limpiar el input después de agregar
+      renderNames();
+    }
+  }
+  
+  // Función para eliminar un elemento del array
+  function removeElement() {
+    const removeElementInput = document.getElementById("removeElementInput");
+    const nameToRemove = removeElementInput.value.trim();
+  
+    if (nameToRemove !== "") {
+      const index = nombres.indexOf(nameToRemove);
+      
+      if (index !== -1) {
+        nombres.splice(index, 1);
+        removeElementInput.value = ""; // Limpiar el input después de eliminar
+        renderNames();
+      } else {
+        alert("El nombre no existe en la lista.");
+      }
+    }
+  }
+  
+  // Mostrar la lista inicial al cargar la página
+  renderNames();
