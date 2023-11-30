@@ -11,7 +11,47 @@ body{
     background-size: cover;
 }
 
+ /*CARRUSEL DE IMAGENES*/
 
+   .carrusel-sec {
+    overflow: hidden;
+    margin: 0 ;
+    padding: 0;
+  }
+  
+  .container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animation-container {
+    display: inline-block;
+    animation: moveImages linear infinite;
+  }
+  
+  .animated-image {
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin-right: 20px; /* Ajusta el espacio entre las imágenes según tus necesidades */
+  }
+  
+  @keyframes moveImages {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
+  
+
+  
+  
+/*FIN CARRUSEL DE IMAGENES*/
 #check {
     display: none;
 }
