@@ -9,6 +9,7 @@ body{
     background-image: url(Imagenes_Isaac/Background_2.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
  /*CARRUSEL DE IMAGENES*/
@@ -20,6 +21,8 @@ body{
   }
   
   .container {
+    margin: 0 ;
+    padding: 0;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
@@ -28,6 +31,9 @@ body{
   .animation-container {
     display: inline-block;
     animation: moveImages linear infinite;
+    margin: 0 ;
+    padding: 0;
+    
   }
   
   .animated-image {
@@ -36,15 +42,6 @@ body{
     margin-right: 20px; /* Ajusta el espacio entre las imágenes según tus necesidades */
   }
   
-  @keyframes moveImages {
-    0% {
-      transform: translateX(0);
-    }
-  
-    100% {
-      transform: translateX(-100%);
-    }
-  }
   
   
   
