@@ -1,6 +1,6 @@
 .container {
-    background: url('./imagenes/matrix_-_47802_1080p.mp4') center center fixed; 
-    background-size: cover;
+   
+    
 }
 
 body {
@@ -8,6 +8,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('./imagenes/matrix_-_47802_1080p.mp4'); 
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 
@@ -41,7 +44,9 @@ h2.CHOICE {
     border-radius: 25px;
     text-decoration: none;
     margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(235, 228, 228, 0.45);
   }
+
 
   .btnblue {
     width: 100px;
@@ -53,4 +58,125 @@ h2.CHOICE {
     border-radius: 25px;
     text-decoration: none;
     margin-bottom: 100px;
+    text-shadow: 3px 3px 10px rgba(160, 153, 153, 0.186);
   }
+  #video_background {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+    }
+    #video_pattern {
+    background:#fff;
+    position: fixed;
+    opacity: 0.8;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    }
+  /*parte boton recurso web
+  .btnred {
+    border: none;
+    padding: 0.8em 2.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(188, 167, 167, 0.45);
+  }
+  
+  .btnred:before,
+  .btnred:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: "";
+    z-index: -2;
+    background-size: 200% 200%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+  }
+  
+  .btnred:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+  }
+  
+  .btnred:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+  }
+  
+  .btnred:hover:before {
+    width: 115%;
+    height: 115%;
+  }
+
+
+  .btnred, .btnblue {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btnred:hover, .btnblue:hover {
+    animation: glowing 20s linear infinite;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .btnred:hover::before, .btnblue:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+      #ff0000, darkred, darkgreen,
+      darkred, #ff0000, darkred,
+      darkgreen, darkred);
+    background-size: 1000%;
+    border-radius: 12px;
+    filter: blur(18px);
+  }*/
