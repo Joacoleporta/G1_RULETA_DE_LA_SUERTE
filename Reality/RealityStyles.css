@@ -43,9 +43,32 @@ body {
     margin-right: 20px;
     /* Ajusta el espacio entre las imágenes según tus necesidades */
 }
+.centrado{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+}
+
+#miDiv p{
+
+text-align: center;
+
+}
+#miDiv{
+    text-align: center;
+    width: 100%;
+    /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
 
 
-
+    /* Ajusta el espacio entre las imágenes según tus necesidades */
+}
 
 
 
@@ -96,7 +119,6 @@ form {
     justify-content: center;
     font-weight: bold;
 }
-
 
 #resultado {
 
