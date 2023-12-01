@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="RealityStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
 
     <title>Reality</title>
 </head>
@@ -12,59 +15,62 @@
 <body>
     <section class="personage">
         <h1>SPIN THE WELL TO DETERMINATE YOUR FUTURE</h1>
-        <figure class="tentacles">
-            <img src="Imagenes_Isaac/Tentaculos.png" alt="SpinWhell">
-            <figcaption>GO !</figcaption>
-            <input type="checkbox" id="btngo">
-            <label for="btngo"></label>
+        <figure id="move">
+            <div class="tentacles">
+                <button class="btn05" onclick="toggleCarousel()">
+                    ¡GO!
+                </button>
+            </div>
+        </figure>
     </section>
 
 
     <section class="carrusel-sec">
-            <div class="container" >
-                <div class="animation-container" id="animationContainer">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 1.png" alt="Image 1">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 2.png" alt="Image 2">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 3.png" alt="Image 3">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 4.png" alt="Image 4">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 5.png" alt="Image 5">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 6.png" alt="Image 6">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 7.png" alt="Image 7">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 8.png" alt="Image 8">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 9.png" alt="Image 9">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 10.png" alt="Image 10">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 11.png" alt="Image 11">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 12.png" alt="Image 12">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 13.png" alt="Image 13">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 14.png" alt="Image 14">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 15.png" alt="Image 15">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 16.png" alt="Image 16">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 17.png" alt="Image 17">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 18.png" alt="Image 18">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 19.png" alt="Image 19">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 20.png" alt="Image 20">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 21.png" alt="Image 21">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 22.png" alt="Image 22">
-                    <img class="animated-image" src="imgDavid/Personajes/Ellipse 23.png" alt="Image 23">
-                </div>
+        <div class="container">
+            <div class="animation-container" id="animationContainer">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 1.png" alt="Image 1">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 2.png" alt="Image 2">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 3.png" alt="Image 3">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 4.png" alt="Image 4">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 5.png" alt="Image 5">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 6.png" alt="Image 6">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 7.png" alt="Image 7">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 8.png" alt="Image 8">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 9.png" alt="Image 9">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 10.png" alt="Image 10">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 11.png" alt="Image 11">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 12.png" alt="Image 12">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 13.png" alt="Image 13">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 14.png" alt="Image 14">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 15.png" alt="Image 15">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 16.png" alt="Image 16">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 17.png" alt="Image 17">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 18.png" alt="Image 18">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 19.png" alt="Image 19">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 20.png" alt="Image 20">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 21.png" alt="Image 21">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 22.png" alt="Image 22">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 23.png" alt="Image 23">
             </div>
-    </section>
-    <section>
-        <div class="btn1">
-            <button onclick="toggleCarousel()" class="one">
-                MATRIX
-            </button> 
-         </div>
-         <div class="btn2">
-            <button class="two">
-                REALITY
-            </button>
         </div>
     </section>
-    <footer>
 
-    </footer>
-<script src="Realityjs.js"></script>
+    <section>
+        <footer>
+            <div class="btn1">
+                <button class="one">
+                    Start
+                </button>
+            </div>
+            <div class="btn2">
+                <button class="two">
+                    Reboot
+                </button>
+            </div>
+        </footer>
+    </section>
+
+    <script src="Realityjs.js"></script>
 </body>
 
 </html>

@@ -1,54 +1,50 @@
+/* ESTILOS GENERALES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: url(https://fonts.google.com/specimen/Anonymous+Pro)
 }
 
 body {
     background-image: url(Imagenes_Isaac/Background_2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
- /*CARRUSEL DE IMAGENES*/
+/*CARRUSEL DE IMAGENES*/
 
-   .carrusel-sec {
+.carrusel-sec {
     overflow: hidden;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
-  }
-  
-  .container {
-    margin: 0 ;
+}
+
+.container {
+    margin: 0;
     padding: 0;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-  }
-  
-  .animation-container {
+}
+
+.animation-container {
     display: inline-block;
     animation: moveImages linear infinite;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
-    
-  }
-  
-  .animated-image {
-    width: 100px; /* Ajusta el tamaño según tus necesidades */
-    height: auto;
-    margin-right: 20px; /* Ajusta el espacio entre las imágenes según tus necesidades */
-  }
-  
-  
-  
-  
+}
 
-  
-  
+.animated-image {
+    width: 100px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin-right: 20px;
+    /* Ajusta el espacio entre las imágenes según tus necesidades */
+}
+
 /*FIN CARRUSEL DE IMAGENES*/
+
 #check {
     display: none;
 }
@@ -71,15 +67,37 @@ h1 {
     font-weight: 700;
     line-height: normal;
     margin-top: 5%;
-
 }
+
+/* #move {
+    height: 40vh;
+    width: 40vh; 
+    transition: box-shadow .1s, transform;
+    background: url(Imagenes_Isaac/Tentaculos.png)
+        no-repeat
+        center;
+        background-size: cover;
+}
+
+#move:hover{
+    box-shadow: 0px 0px 50px rgba(0,0,0, 1);
+}
+ */
+
+ /* CONTENIDO */
 
 .tentacles {
-    display: flex;
-    flex-direction: column;
+    background-image: url(Imagenes_Isaac/Tentaculos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40vh;
+    width: 40vh;
+    text-align: center;
+    align-items: center;
+    padding-top: 14vh;
+    padding-right: 3vh;
+    opacity: 0.8;
 }
-
-
 
 .personage {
     display: flex;
@@ -89,88 +107,46 @@ h1 {
 
 .items {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-#btngo {
-    background: black;
-    cursor: pointer;
-    border: none;
-    padding: 16px 32px;
-    color: #FFF;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    border-radius: 12px;
-}
-/*  button {
-    background: red;
-    cursor: pointer;
-    border: none;
-    padding: 16px 32px;
-    color: #FFF;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    border-radius: 12px;
+    justify-content: center;
+    align-items: space-around;
 }
 
-button::before {
-    content: "";
-    position:absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg,
-        rgb(1, 128, 1), lightgreen, #5EFF33, darkgreen, 
-        darkgreen, #5EFF33, lightgreen,  rgb(1, 128, 1),
-    ); 
-    background-size: 800%;
-    border-radius: 5%;
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-}
-
-@keyframes glowing {
-  0%  {
-    background-position: 0 0 ;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
-}
-*/
+/*  BUTTONS */
 
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 5vh;
 }
 
-.btn1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20%;
-    justify-content: space-around;
+.btn05 {
+    background: #157F6E;
+    opacity: 0.7;
+    clip-path: circle(50% at center);
+    cursor: pointer;
+    border: none;
+    padding: 15px 3px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
 }
 
 .one {
     background: red;
     cursor: pointer;
     border: none;
-    padding: 16px 32px;
+    padding: 16px 45px;
     color: azure;
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border-radius: 30px;
+    border-radius: 98px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-top: 4vh;
 }
 
 button.one:hover::before {
@@ -187,7 +163,7 @@ button.one:hover::before {
             darkgreen, darkred);
     background-size: 1500%;
     border-radius: 12px;
-    filter: blur(18px);
+    filter: blur(28px);
     animation: glowing 20s linear infinite;
 }
 
@@ -205,15 +181,6 @@ button.one:hover::before {
     }
 }
 
-.btn2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20%;
-    justify-content: space-around;
-}
-
 .two {
     background: blue;
     cursor: pointer;
@@ -223,10 +190,14 @@ button.one:hover::before {
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border-radius: 30px;
+    border-radius: 98px;
+    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
 }
 
-button:hover::before {
+button.two:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -240,7 +211,7 @@ button:hover::before {
             darkgreen, darkred);
     background-size: 1000%;
     border-radius: 12px;
-    filter: blur(18px);
+    filter: blur(28px);
     animation: glowing 20s linear infinite;
 }
 
