@@ -12,6 +12,11 @@ body {
     background-size: cover;
 }
 
+a {
+    text-decoration: none;
+    color: azure;
+}
+
 /*CARRUSEL DE IMAGENES*/
 
 .carrusel-sec {
@@ -134,7 +139,6 @@ footer {
 }
 
 .one {
-    background: red;
     cursor: pointer;
     border: none;
     padding: 16px 45px;
@@ -143,7 +147,7 @@ footer {
     font-weight: bold;
     position: relative;
     border-radius: 98px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+    background: linear-gradient(1deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
     mix-blend-mode: plus-lighter;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
     margin-top: 4vh;
@@ -182,7 +186,6 @@ button.one:hover::before {
 }
 
 .two {
-    background: blue;
     cursor: pointer;
     border: none;
     padding: 16px 32px;
