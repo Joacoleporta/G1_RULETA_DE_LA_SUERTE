@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/imagenes/No_reality.jpg); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ubicación de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    font-family: 'Anonymous Pro', monospace;
+    color:white;
+  }
+
+header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    }
+
+.heard {
+    font-size: 4vh;
+    position:absolute;
+    left:50%;
+    text-align: center;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    width: 100%;
+    }
+
+
+.pildoras{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+    padding: auto;
+    font-size: 23px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.pil-azul {
+    background: blue;
+    cursor: pointer;
+    border: none;
+    padding: 16px 45px;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 98px;
+    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    text-decoration: none;
+    
+}
+
+.pil-roja {
+    background: red;
+    cursor: pointer;
+    border: none;
+    padding: 16px 45px;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 30px;
+    border-radius: 98px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-top: 4vh;
+    text-decoration: none;
+}
