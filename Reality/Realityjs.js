@@ -102,34 +102,130 @@ function obtenerNombreAleatorio(array) {
     isCarouselRunning = !isCarouselRunning;
   }
 
-  // supuesto efecto para la nave, no funciona, porque?
-/*   const el = document.getElementById('move')
-  const height = el.clientHeight
-  const width = el.clientWidth
 
-  el.addEventListener('mousemove', (evt) => {
-    const { layerX, layerY} = evt 
+  /////////////ARRAY NOMBRES/////////////////////
+const nombres = ["Max", "Alicia","Jose","Mercedes","Jander","Yessi","Anzu", "Neimy","Hanna","Isaac", "Juanjo","David","Paolo","Alba", "Joaco","Alberto","Denisse", "Alfredo","Alfredo", "Marcela","Laudy", "Victor","Yady","Alvaro", "Roxana","Elena"];
 
-    const yRotation = (
-      (layerX - width / 4) / widht ) * 20
-    
+const btnGenerar = document.getElementById("btnGenerar");
+const resultado = document.getElementById("resultado");
 
-    const xRotation = (
-      (layerY - height / 4) / height ) * 20 
+btnGenerar.addEventListener("click",  function (){
 
-    const string = ` 
-      perspective(500px)
-      scale(1.1)
-      rotateX(${xRotation}deg)
-      rotateY(${yRotation}deg)`
+    const nombreAleatorio = obtenerNombreAleatorio(nombres);
+    resultado.textContent = nombreAleatorio;
+});
 
-    el.style.transform = string
-  })
 
-  el.addEventListener('mouseout', () =>{
-    el.style.transform =
-      perspective(500px)
-      scale(1)
-      rotateX(0)
-      rotateY(0)
-  }) */
+function obtenerNombreAleatorio(array) {
+    const indiceAleatorio = Math.floor(Math.random() * array.length);
+    return array[indiceAleatorio];
+  }
+
+
+
+
+  function renderNames() {
+    const nameList = document.getElementById("nameList");
+  
+    // Limpiar la lista actual
+    nameList.innerHTML = "";
+  
+    // Agregar cada nombre al listado
+    nombres.forEach(name => {
+      const listItem = document.createElement("li");
+      listItem.textContent = name;
+      nameList.appendChild(listItem);
+    });
+  }
+  
+  // Función para agregar un elemento al array
+  function addElement() {
+    const addElementInput = document.getElementById("addElementInput");
+    const newName = addElementInput.value.trim();
+  
+    if (newName !== "") {
+      nombres.push(newName);
+      addElementInput.value = ""; // Limpiar el input después de agregar
+      renderNames();
+    }
+  }
+  
+  // Función para eliminar un elemento del array
+  function removeElement() {
+    const removeElementInput = document.getElementById("removeElementInput");
+    const nameToRemove = removeElementInput.value.trim();
+  
+    if (nameToRemove !== "") {
+      const index = nombres.indexOf(nameToRemove);
+      
+      if (index !== -1) {
+        nombres.splice(index, 1);
+        removeElementInput.value = ""; // Limpiar el input después de eliminar
+        renderNames();
+      } else {
+        alert("El nombre no existe en la lista.");
+      }
+    }
+  }
+  
+  // Mostrar la lista inicial al cargar la página
+  renderNames();
+
+
+
+
+
+
+  const imagenes = document.querySelectorAll('.animated-image');
+
+  // Inicializa un array para almacenar los valores de "alt"
+  const altArray = [];
+
+  // Itera sobre cada imagen y agrega el valor de "alt" al array
+  imagenes.forEach((imagen) => {
+    altArray.push({ alt: imagen.alt, src: imagen.src });
+  });
+
+  function mostrarDescripcionAleatoria() {
+    // Obtén un índice aleatorio del array
+    const indiceAleatorio = Math.floor(Math.random() * altArray.length);
+
+    // Obtiene la descripción y la fuente de la imagen aleatoria
+    const descripcion = altArray[indiceAleatorio].alt;
+    const imagenSrc = altArray[indiceAleatorio].src;
+
+    // Actualiza el contenido del div con el id "miDiv"
+    document.getElementById('miDiv').innerHTML = '';
+
+    // Añade la descripción al div
+    const descripcionElement = document.createElement('p');
+    descripcionElement.textContent = `Te ha tocado: ${descripcion}`;
+    document.getElementById('miDiv').appendChild(descripcionElement);
+
+    // Añade la imagen como un elemento img al div
+    const imagenElement = document.createElement('img');
+    imagenElement.src = imagenSrc;
+    imagenElement.alt = descripcion;
+    document.getElementById('miDiv').appendChild(imagenElement);
+  }
+
+
+
+  //////////////////////////
+  /*
+const nombres = ["Max", "Alicia","Jose","Mercedes","Jander","Yessi","Anzu", "Neimy","Hanna","Isaac", "Juanjo","David","Paolo","Alba", "Joaco","Alberto","Denisse", "Alfredo","Alfredo", "Marcela","Laudy", "Victor","Yady","Alvaro", "Roxana","Elena"];
+
+const btnGenerar = document.getElementById("btnGenerar");
+const resultado = document.getElementById("resultado");
+
+btnGenerar.addEventListener("click",  function (){
+
+    const nombreAleatorio = obtenerNombreAleatorio(nombres);
+    resultado.textContent = nombreAleatorio;
+});
+
+
+function obtenerNombreAleatorio(array) {
+    const indiceAleatorio = Math.floor(Math.random() * array.length);
+    return array[indiceAleatorio];
+  }*/

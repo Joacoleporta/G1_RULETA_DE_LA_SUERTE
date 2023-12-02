@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-body {
+body  {
     background-image: url(Imagenes_Isaac/background5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 a {
@@ -38,21 +38,163 @@ a {
     animation: moveImages linear infinite;
     margin: 0;
     padding: 0;
-}
-
-.animated-image {
-    width: 100px;
-    /* Ajusta el tamaño según tus necesidades */
+    
+  }
+  
+  .animated-image {
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
     height: auto;
     margin-right: 20px;
     /* Ajusta el espacio entre las imágenes según tus necesidades */
 }
+.centrado{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+}
+
+#miDiv p{
+
+text-align: center;
+
+}
+#miDiv{
+    text-align: center;
+    width: 100%;
+    /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+
+
+    /* Ajusta el espacio entre las imágenes según tus necesidades */
+}
+
+
+
 
 /*FIN CARRUSEL DE IMAGENES*/
 
-#check {
-    display: none;
+/*FORMULARIO*/
+
+.contenedor img {
+    width: 50%;
+    height: auto;
+
 }
+
+
+#addElementInput,
+#removeElementInput {
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+    width: 15vh;
+    height: 5vh;
+    flex-shrink: 0;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.add,
+.remove {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#resultado {
+
+    color: #FFF;
+    text-align: center;
+    font-family: Anonymous Pro;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+#btnGenerar img {
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url(Boton.png);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+    
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+ul li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 1%;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+    flex-shrink: 0;
+    color: white;
+    font-weight: bold;
+    margin: 2px;
+    padding: 2px;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+input {
+    color: white;
+    font-size: large;
+}
+
+/*FIN FORMULARIO*/
 
 section {
     display: flex;
@@ -73,24 +215,6 @@ h1 {
     line-height: normal;
     margin-top: 5%;
 }
-
-/* #move {
-    height: 40vh;
-    width: 40vh; 
-    transition: box-shadow .1s, transform;
-    background: url(Imagenes_Isaac/Tentaculos.png)
-        no-repeat
-        center;
-        background-size: cover;
-}
-
-#move:hover{
-    box-shadow: 0px 0px 50px rgba(0,0,0, 1);
-}
- */
-
-/* CONTENIDO */
-
 .tentacles {
     display: flex;
     flex-direction: column-reverse;
