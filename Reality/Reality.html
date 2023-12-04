@@ -14,23 +14,18 @@
 
 <body>
     <section class="characters">
-        <h1>SPIN THE WELL TO DETERMINATE YOUR FUTURE</h1>
+        <h1>SPIN THE ROULLETE TO DISCOVER YOUR FUTURE</h1>
         <figure class="tentacles">
             <img src="Imagenes_Isaac/Tentaculos.png" alt="">
-            <button class="btn05" onclick="toggleCarousel()">
+            <button class="btn05" id="btnGenerar"  onclick="toggleCarousel(), mostrarDescripcionAleatoria() "> 
                 ¡GO!
             </button>
         </figure>
     </section>
-
-
     <div class="centrado">
         <h2 id="resultado"></h2>
         <div id="miDiv"></div>
     </div>
-
-    
-
     <section class="carrusel-sec">
             <div class="container" >
                 <div class="animation-container" id="animationContainer">
@@ -60,22 +55,7 @@
                 </div>
             </div>
     </section>
-    
-
-
-
-
     <section class="contenedor">
-
-        <img src="" />
-        <div class="resultado ">
-            <div id="resultadoContenedor"></div>
-            <button id="btnGenerar" onclick=" mostrarDescripcionAleatoria()">
-                boton
-            </button>
-        </div>
-
-
         <div class="">
             <form id="modifyArrayForm">
                 <div class="add">
@@ -93,13 +73,10 @@
                 <div class="add"><button type="button" onclick="addElement()">Añadir</button></div>
                 <div class="remove"><button type="button" onclick="removeElement()">Eliminar</button></div>
             </div>
-            <h2>Participantes del juego</h2>
-
             <div class="lista">
                 <ul id="nameList"></ul>
             </div>
         </div>
-
         <main>
             <section class="donw">
                 <div class="btn1">

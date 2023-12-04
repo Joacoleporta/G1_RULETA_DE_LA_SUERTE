@@ -74,9 +74,6 @@ text-align: center;
     /* Ajusta el espacio entre las imágenes según tus necesidades */
 }
 
-
-
-
 /*FIN CARRUSEL DE IMAGENES*/
 
 /*FORMULARIO*/
@@ -84,9 +81,7 @@ text-align: center;
 .contenedor img {
     width: 50%;
     height: auto;
-
 }
-
 
 #addElementInput,
 #removeElementInput {
@@ -95,15 +90,12 @@ text-align: center;
     width: 15vh;
     height: 5vh;
     flex-shrink: 0;
-
-
 }
 
 form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .add,
@@ -114,9 +106,7 @@ form {
     margin: auto;
     color: white;
     font-weight: bold;
-
 }
-
 
 .botones {
     display: flex;
@@ -126,21 +116,12 @@ form {
 }
 
 #resultado {
-
     color: #FFF;
     text-align: center;
-    font-family: Anonymous Pro;
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-
-#btnGenerar img {
-    width: auto;
-    height: auto;
-    padding: 0;
 }
 
 button {
@@ -154,7 +135,6 @@ button {
     color: white;
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
-    
 }
 
 ul {
@@ -231,11 +211,6 @@ h1 {
     align-items: center;
 }
 
-.items {
-    display: flex;
-    justify-content: center;
-    align-items: space-around;
-}
 
 /*  BUTTONS */
 
@@ -251,7 +226,7 @@ h1 {
     opacity: 0.7;
     clip-path: circle(49% at center);
     cursor: pointer;
-    padding: 15px 3px;
+    padding: 15px 4px;
     color: #FFF;
     font-size: 24px;
     font-weight: bold;
@@ -259,7 +234,7 @@ h1 {
 
 button.btn05 {
     position: absolute;
-    top: 28%;
+    top: 24%;
     left: 44%;
     z-index: 1;
 }
