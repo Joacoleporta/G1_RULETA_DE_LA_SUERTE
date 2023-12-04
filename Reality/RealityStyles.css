@@ -30,17 +30,17 @@ a {
 /*CARRUSEL DE IMAGENES*/
 /* ROTACION IMAGEN*/
 
-.contenedorTenta {
+.container-img{
     position: relative;
- 
-  }
+    margin-top: 4vh;
 
+}
 #imagenRotativa {
-    width: 100%;
-    height: 100%;
-    animation: rotar 2s linear infinite;
-    transform-origin: center center; /* Establece el punto de rotación en el centro de la imagen */
-  }
+  width: 100%;
+  height: 100%;
+  animation: rotar 2s linear infinite;
+  transform-origin: 51.5% 43%; /* Establece el punto de rotación en el centro de la imagen */
+}
   
   @keyframes rotar {
     from {
@@ -155,6 +155,7 @@ a {
 .botones {
     display: flex;
     flex-direction: row;
+
 
     font-weight: bold;
     justify-content: space-evenly;
