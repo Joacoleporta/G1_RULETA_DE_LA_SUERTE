@@ -1,15 +1,25 @@
 /* ESTILOS GENERALES */
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Anonymous pro;
+}
+
+.participantes {
+color: white;
+text-align: center;
+margin:2% ;
+}
+
+.container-lista{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 body  {
     background-image: url(Imagenes_Isaac/background5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 a {
@@ -18,11 +28,38 @@ a {
 }
 
 /*CARRUSEL DE IMAGENES*/
+/* ROTACION IMAGEN*/
+
+.contenedorTenta {
+    position: relative;
+}
+
+#imagenRotativa {
+    width: 100%;
+    height: 100%;
+    animation: rotar 2s linear infinite;
+    transform-origin: center center; /* Establece el punto de rotación en el centro de la imagen */
+  }
+  
+  @keyframes rotar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/* FIN ROTACION IMAGEN*/
 
 .carrusel-sec {
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    margin: 0;
 }
 
 .container {
@@ -33,22 +70,24 @@ a {
     position: relative;
 }
 
+
 .animation-container {
     display: inline-block;
     animation: moveImages linear infinite;
     margin: 0;
+    margin: 0;
     padding: 0;
-    
-  }
-  
-  .animated-image {
-    width: 100px; /* Ajusta el tamaño según tus necesidades */
+}
+
+.animated-image {
+    width: 100px;
+    /* Ajusta el tamaño según tus necesidades */
     height: auto;
     margin-right: 20px;
     /* Ajusta el espacio entre las imágenes según tus necesidades */
 }
-.centrado{
 
+.centrado {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,11 +95,7 @@ a {
     width: 100%;
 }
 
-#miDiv p{
 
-text-align: center;
-
-}
 #miDiv{
     text-align: center;
     width: 100%;
@@ -98,22 +133,34 @@ form {
     justify-content: center;
 }
 
-.add,
-.remove {
+.add-remove{
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
-    margin: auto;
+    justify-content: space-between;
     color: white;
     font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 .botones {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     font-weight: bold;
+    justify-content: space-evenly;
 }
+
+
+.botones .add{
+    width: 200%;
+    padding: 10% 2%;
+}
+.botones .remove{
+    width: 200%;
+    padding: 10% 2%;
+}
+
 
 #resultado {
     color: #FFF;
@@ -124,11 +171,33 @@ form {
     line-height: normal;
 }
 
-button {
-    padding: 10px;
-    font-size: 16px;
+
+#btnGenerar img {
+    width: auto;
+    height: auto;
+    padding: 0;
+    
+}
+
+.Badd  {
+    
+    width: 100%;
+    font-size:x-large;
     cursor: pointer;
-    background-image: url(Boton.png);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+}
+
+.Bremove {
+    
+    width: 100%;
+  
+    font-size:x-large;
+    cursor: pointer;
     border: none;
     border-radius: 4px;
     outline: none;
@@ -153,30 +222,26 @@ ul li {
 }
 
 .lista {
-    display: flex;
-    flex-direction: column;
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
-    flex-shrink: 0;
     color: white;
     font-weight: bold;
-    margin: 2px;
-    padding: 2px;
+    margin: 10%;
+    padding: 3%x;
     color: #FFF;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 
 }
 
 input {
     color: white;
     font-size: large;
+
 }
 
 /*FIN FORMULARIO*/
 
-section {
+.contenedor section {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -209,8 +274,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%;
 }
-
 
 /*  BUTTONS */
 
@@ -234,7 +299,7 @@ h1 {
 
 button.btn05 {
     position: absolute;
-    top: 24%;
+    top: 38%;
     left: 44%;
     z-index: 1;
 }

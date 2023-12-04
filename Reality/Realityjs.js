@@ -177,17 +177,14 @@ function obtenerNombreAleatorio(array) {
 
 
   const imagenes = document.querySelectorAll('.animated-image');
-
-  // Inicializa un array para almacenar los valores de "alt"
   const altArray = [];
 
-  // Itera sobre cada imagen y agrega el valor de "alt" al array
   imagenes.forEach((imagen) => {
     altArray.push({ alt: imagen.alt, src: imagen.src });
   });
 
   function mostrarDescripcionAleatoria() {
-    // Obtén un índice aleatorio del array
+  
     const indiceAleatorio = Math.floor(Math.random() * altArray.length);
 
     // Obtiene la descripción y la fuente de la imagen aleatoria
@@ -210,22 +207,20 @@ function obtenerNombreAleatorio(array) {
   }
 
 
+///////ROTACION IMAGEN////////////
+let rotacionPausada = false;
 
-  //////////////////////////
-  /*
-const nombres = ["Max", "Alicia","Jose","Mercedes","Jander","Yessi","Anzu", "Neimy","Hanna","Isaac", "Juanjo","David","Paolo","Alba", "Joaco","Alberto","Denisse", "Alfredo","Alfredo", "Marcela","Laudy", "Victor","Yady","Alvaro", "Roxana","Elena"];
+function toggleRotacion() {
+  const imagen = document.getElementById('imagenRotativa');
+  const btnToggle = document.getElementById('btnGenerar');
 
-const btnGenerar = document.getElementById("btnGenerar");
-const resultado = document.getElementById("resultado");
+  if (rotacionPausada) {
+    imagen.style.animationPlayState = 'running';
+    //btnToggle.textContent = 'Pausar Rotación';
+  } else {
+    imagen.style.animationPlayState = 'paused';
+    //btnToggle.textContent = 'Reanudar Rotación';
+  }
 
-btnGenerar.addEventListener("click",  function (){
-
-    const nombreAleatorio = obtenerNombreAleatorio(nombres);
-    resultado.textContent = nombreAleatorio;
-});
-
-
-function obtenerNombreAleatorio(array) {
-    const indiceAleatorio = Math.floor(Math.random() * array.length);
-    return array[indiceAleatorio];
-  }*/
+  rotacionPausada = !rotacionPausada;
+}

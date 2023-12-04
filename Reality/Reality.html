@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap">
     <title>Reality</title>
 </head>
 
@@ -27,6 +26,7 @@
         <div id="miDiv"></div>
     </div>
     <section class="carrusel-sec">
+
             <div class="container" >
                 <div class="animation-container" id="animationContainer">
                     <img class="animated-image" src="imgDavid/Personajes/Ellipse 1.png" alt="Neo">
@@ -56,25 +56,37 @@
             </div>
     </section>
     <section class="contenedor">
+        <img src="" />
+        <div class="resultado ">
+            <div id="resultadoContenedor"></div>
+        </div>
         <div class="">
             <form id="modifyArrayForm">
+                <div class="add-remove">
                 <div class="add">
-                <label id="add" for="addElementInput"></button>
-                </label>
-                <input type="text" id="addElementInput">
-                 </div>
+                    <label id="add" for="addElementInput"></button>
+                    </label>
+                    <input type="text" id="addElementInput">
+                </div>
                 <br>
-                 <div class="remove">
-                <label id="remove" for="removeElementInput"></label>
-                <input type="text" id="removeElementInput">
+                <div class="remove">
+                    <label id="remove" for="removeElementInput"></label>
+                    <input type="text" id="removeElementInput">
+                </div>
             </div>
             </form>
             <div class="botones">
-                <div class="add"><button type="button" onclick="addElement()">Añadir</button></div>
-                <div class="remove"><button type="button" onclick="removeElement()">Eliminar</button></div>
+                <div ><button class="Badd" type="button" onclick="addElement()">Añadir</button></div>
+                <div ><button class="Bremove" type="button" onclick="removeElement()">Eliminar</button></div>
             </div>
-            <div class="lista">
-                <ul id="nameList"></ul>
+            <div class="container-lista">
+                <div class="participantes">
+                    <h2>Participantes</h2>
+                </div>
+
+                <div class="lista">
+                    <ul id="nameList"></ul>
+                </div>
             </div>
         </div>
         <main>
@@ -94,8 +106,7 @@
     </section>
     <footer>
 
-    </footer>
-<script src="Realityjs.js"></script>
+        <script src="Realityjs.js"></script>
 </body>
 
 </html>
