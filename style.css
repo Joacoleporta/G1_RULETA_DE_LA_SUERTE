@@ -3,7 +3,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('./imagenes/matrix_-_47802_1080p.mp4'); 
+    /*background: url('./imagenes/matrix_-_47802_1080p.mp4');*/
+    background-image: url('./imagenes/fondo\ home\ Matrix.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
