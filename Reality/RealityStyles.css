@@ -1,23 +1,66 @@
+/* ESTILOS GENERALES */
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Anonymous pro;
+}
+.participantes{
+color: white;
+text-align: center;
+margin:2% ;
+
+}
+.container-lista{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
 }
 
 body {
-    background-image: url(Imagenes_Isaac/Background_2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(imgDavid/FondoNuevo.png);
 
+   
+}
+
+a {
+    text-decoration: none;
+    color: azure;
 }
 
 /*CARRUSEL DE IMAGENES*/
+/* ROTACION IMAGEN*/
+
+.contenedorTenta {
+    position: relative;
+ 
+  }
+
+#imagenRotativa {
+    width: 100%;
+    height: 100%;
+    animation: rotar 2s linear infinite;
+    transform-origin: center center; /* Establece el punto de rotación en el centro de la imagen */
+  }
+  
+  @keyframes rotar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/* FIN ROTACION IMAGEN*/
 
 .carrusel-sec {
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    margin: 0;
 }
 
 .container {
@@ -28,9 +71,11 @@ body {
     position: relative;
 }
 
+
 .animation-container {
     display: inline-block;
     animation: moveImages linear infinite;
+    margin: 0;
     margin: 0;
     padding: 0;
 
@@ -52,11 +97,7 @@ body {
     width: 100%;
 }
 
-#miDiv p{
 
-text-align: center;
-
-}
 #miDiv{
     text-align: center;
     width: 100%;
@@ -93,32 +134,42 @@ text-align: center;
     flex-shrink: 0;
 
 
-}
+   
 
-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
 }
 
-.add,
-.remove {
+
+
+.add-remove{
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
-    margin: auto;
+    justify-content: space-between;
     color: white;
     font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
 .botones {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
     font-weight: bold;
+    justify-content: space-evenly;
 }
+
+
+.botones .add{
+    width: 200%;
+    padding: 10% 2%;
+}
+.botones .remove{
+    width: 200%;
+    padding: 10% 2%;
+}
+
 
 #resultado {
 
@@ -136,13 +187,15 @@ form {
     width: auto;
     height: auto;
     padding: 0;
+    
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
+    
+    width: 100%;
+    padding: 5%;
+    font-size:x-large;
     cursor: pointer;
-    background-image: url(Boton.png);
     border: none;
     border-radius: 4px;
     outline: none;
@@ -167,33 +220,28 @@ ul li {
 }
 
 .lista {
-    display: flex;
-    flex-direction: column;
+   
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
-    flex-shrink: 0;
     color: white;
     font-weight: bold;
-    margin: 2px;
-    padding: 2px;
+    margin: 10%;
+    padding: 3%x;
     color: #FFF;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 
 }
 
 input {
     color: white;
     font-size: large;
+
 }
 
 /*FIN FORMULARIO*/
-#check {
-    display: none;
-}
 
-section {
+
+.contenedor section {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -211,93 +259,86 @@ h1 {
     font-weight: 700;
     line-height: normal;
     margin-top: 5%;
-
 }
 
+/* #move {
+    height: 40vh;
+    width: 40vh; 
+    transition: box-shadow .1s, transform;
+    background: url(Imagenes_Isaac/Tentaculos.png)
+        no-repeat
+        center;
+        background-size: cover;
+}
+
+#move:hover{
+    box-shadow: 0px 0px 50px rgba(0,0,0, 1);
+}
+ */
+
+ /* CONTENIDO */
+
 .tentacles {
-    display: flex;
-    flex-direction: column;
+    background-image: url(Imagenes_Isaac/Tentaculos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40vh;
+    width: 40vh;
+    text-align: center;
+    align-items: center;
+    padding-top: 14vh;
+    
+    opacity: 0.8;
 }
 
 .personage {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 .items {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    align-items: space-around;
 }
 
-/*  button {
-    background: red;
+/*  BUTTONS */
+
+footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.btn05 {
+    background: #157F6E;
+    opacity: 0.7;
+    clip-path: circle(50% at center);
     cursor: pointer;
     border: none;
-    padding: 16px 32px;
+    padding: 15px 3px;
     color: #FFF;
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border-radius: 12px;
-}
-
-button::before {
-    content: "";
-    position:absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg,
-        rgb(1, 128, 1), lightgreen, #5EFF33, darkgreen, 
-        darkgreen, #5EFF33, lightgreen,  rgb(1, 128, 1),
-    ); 
-    background-size: 800%;
-    border-radius: 5%;
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-}
-
-@keyframes glowing {
-  0%  {
-    background-position: 0 0 ;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
-}
-*/
-
-footer {
-    display: flex;
-    flex-direction: row;
-}
-
-.btn1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20%;
-    justify-content: space-around;
 }
 
 .one {
-    background: red;
     cursor: pointer;
     border: none;
-    padding: 16px 32px;
+    padding: 16px 45px;
     color: azure;
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border-radius: 30px;
+    border-radius: 98px;
+    background: linear-gradient(1deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-top: 4vh;
 }
 
 button.one:hover::before {
@@ -312,9 +353,9 @@ button.one:hover::before {
             green, darkred, darkgreen,
             darkred, green, darkred,
             darkgreen, darkred);
-    background-size: 1000%;
+    background-size: 1500%;
     border-radius: 12px;
-    filter: blur(8px);
+    filter: blur(28px);
     animation: glowing 20s linear infinite;
 }
 
@@ -332,17 +373,7 @@ button.one:hover::before {
     }
 }
 
-.btn2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20%;
-    justify-content: space-around;
-}
-
 .two {
-    background: blue;
     cursor: pointer;
     border: none;
     padding: 16px 32px;
@@ -350,7 +381,11 @@ button.one:hover::before {
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border-radius: 30px;
+    border-radius: 98px;
+    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
 }
 
 button.two:hover::before {
@@ -365,9 +400,13 @@ button.two:hover::before {
             green, darkred, darkgreen,
             darkred, green, darkred,
             darkgreen, darkred);
+    background: linear-gradient(45deg,
+            green, darkred, darkgreen,
+            darkred, green, darkred,
+            darkgreen, darkred);
     background-size: 1000%;
     border-radius: 12px;
-    filter: blur(8px);
+    filter: blur(28px);
     animation: glowing 20s linear infinite;
 }
 
