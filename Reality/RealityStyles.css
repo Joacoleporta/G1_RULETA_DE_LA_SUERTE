@@ -33,6 +33,7 @@ a {
 .container-img{
     position: relative;
     margin-top: 4vh;
+    width: 70%;
 
 }
 #imagenRotativa {
