@@ -1,15 +1,21 @@
 body {
-    font-family:Anonymous Pro;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*background: url('./imagenes/matrix_-_47802_1080p.mp4');*/
-    background-image: url('./imagenes/fondo\ home\ Matrix.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Anonymous Pro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background: url('./imagenes/matrix_-_47802_1080p.mp4');*/
+  background-image: url('./imagenes/fondo\ home\ Matrix.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 50px;
+  margin-buttom: 40%;
+}
+
+figure{
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none;
   color: azure;
@@ -20,125 +26,216 @@ a {
 }
 
 .CHOICE {
-    color: rgb(229, 225, 225);
-    text-align: center;
-    margin-top: 15%;
-    font-size: 50px;
-    font-weight: bold;
+  color: rgb(229, 225, 225);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Otra opción puede ser 'space-around' según tus necesidades */
+  align-items: center;
+  text-align: center;
+  margin-top: 15%;
+  font-size: 50px;
+  font-weight: bold;
 }
 
-  .container-botoms {
-    font-size: 23px;
-    border-radius: 5px;
-    font-size: 20px;
+.container-botoms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.btnred {
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  padding: 16px 45px;
+  color: azure;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 98px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+  mix-blend-mode: plus-lighter;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  text-decoration: none;
+  margin-bottom: 6vh;
+}
+
+.btnblue {
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  padding: 16px 45px;
+  color: azure;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 98px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 100%, rgba(41, 58, 211, 0.89) 100%, rgba(41, 58, 211, 0.64) 100%);
+  mix-blend-mode: plus-lighter;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  margin-bottom: 8vh;
+  text-decoration: none;
+}
+
+button.btnred:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      green, darkred, darkgreen,
+      darkred, green, darkred,
+      darkgreen, darkred);
+  background-size: 1500%;
+  border-radius: 12px;
+  filter: blur(28px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
-  .btn1 {
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+button.btnblue:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      green, darkred, darkgreen,
+      darkred, green, darkred,
+      darkgreen, darkred);
+  background-size: 1500%;
+  border-radius: 12px;
+  filter: blur(28px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes morfeoAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.morfeo {
+  animation: morfeoAnimation 2s infinite;
+}
+
+.CHOICE {
+  animation: zoomIn 3s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*@media screen and (min-width: 880px) {
+
+  .container-botoms {
     display: flex;
-    justify-content: center;
-
-  } 
-
-  .btn2 {
-    display: flex;
-    justify-content: center;
-
-  } 
-
-  .btnred {
-    cursor: pointer;
-    border: none;
-    padding: 16px 45px;
-    color: azure;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    border-radius: 98px;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
-    mix-blend-mode: plus-lighter;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    text-decoration: none;
-    margin-bottom: 6vh;
+    flex-direction: row; /* Cambia a diseño de fila en pantallas más grandes
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos
   }
 
   .btnblue {
-    cursor: pointer;
-    border: none;
-    padding: 16px 45px;
-    color: azure;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 98px;
-    position: relative;
-    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .morfeo {
+    display: flex;
     align-items: center;
-    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 100%, rgba(41, 58, 211, 0.89) 100%, rgba(41, 58, 211, 0.64) 100%);
-    mix-blend-mode: plus-lighter;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    margin-bottom: 8vh;
-    text-decoration: none;
+    flex-direction: center
+   
+  }
+  .CHOICE {
+
+  }
+}*/
+
+@media screen and (min-width: 880px) {
+
+
+  .morfeo {
+    width: 125%; /* Ajusta el tamaño de la imagen según sea necesario */
   }
 
-button.btnred:hover::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left:0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg,
-  green, darkred, darkgreen,
-  darkred, green, darkred,
-  darkgreen, darkred);
-  background-size: 1500%;
-  border-radius: 12px;
-  filter: blur(28px);
-  animation: glowing 20s linear infinite;
-}
-
-@keyframes glowing {
-  0% {
-      background-position: 0 0;
+  .items {
+    margin: auto; /* Centra la imagen horizontalmente */
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+  } 
+  
+  .CHOICE {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0; /* Ajusta el margen superior según sea necesario */
   }
 
-  50% {
-      background-position: 400% 0;
+  .container-botoms {
+    flex-direction: row; /* Mantiene los botones en la misma línea */
   }
 
-  100% {
-      background-position: 0 0;
-  }
-}
-button.btnblue:hover::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left:0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg,
-  green, darkred, darkgreen,
-  darkred, green, darkred,
-  darkgreen, darkred);
-  background-size: 1500%;
-  border-radius: 12px;
-  filter: blur(28px);
-  animation: glowing 20s linear infinite;
-}
-
-@keyframes glowing {
-  0% {
-      background-position: 0 0;
+  .btnred {
+    margin-bottom: 75%; /* Elimina el margen inferior del botón rojo */
+    margin-right: 55px; /* Ajusta el espacio entre los botones según sea necesario */
   }
 
-  50% {
-      background-position: 400% 0;
-  }
-
-  100% {
-      background-position: 0 0;
+  .btnblue {
+    margin-bottom: 75%; /* Elimina el margen inferior del botón azul */
   }
 }

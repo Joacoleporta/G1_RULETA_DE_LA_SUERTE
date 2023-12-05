@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,31 +8,38 @@
   <link rel="icon" href="./imagenes/Matrix-Logo-PNG-Transparent-Image.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap">
 </head>
-<body>
-  <div class="h2-div">
-    <h2 class="CHOICE">CHOICE YOUR FUTURE</h2>
-  </div>
+<body onmouseover="playAudio()">
+    <div class="CHOICE">
+     <h2>CHOICE YOUR FUTURE</h2> 
+    </div>
   <figure class="items">
     <img class="morfeo" src="./imagenes/Rectangle 5.png" alt="Imagen Morfeo">
-   <!--  <section class="container-botoms">
-      <audio id="audio" src="./imagenes/utomp3.com - White Rabbit Full Epic Trailer Version  The Matrix Resurrections Official Trailer Song Music.mp3"></audio>-->
-      <article class="btn1">
+    <section class="container-botoms">
         <button class="btnred">
           <a href="Matrix.html">MATRIX</a>
         </button>
-      </article>
-      <article class="btn2">
-        <button id="miBoton" class="btnblue">
+        <button class="btnblue">
           <a href="Reality.html">REALITY</a>
         </button>
-      </article>
     </section>
   </figure>
-  <audio autoplay loop>
-    <source src="./imagenes/utomp3.com - White Rabbit Full Epic Trailer Version  The Matrix Resurrections Official Trailer Song Music.mp3" type="audio/mpeg">
-    Tu navegador no es compatible con el audio de HTML5
-  </audio>
-<!-- <script src="./main.js">
-  </script> --!
+  <audio id="hoverAudio" src="./imagenes/utomp3.com - White Rabbit Full Epic Trailer Version  The Matrix Resurrections Official Trailer Song Music.mp3"></audio>
+  <script>
+    function playAudio() {
+      var audio = document.getElementById('hoverAudio');
+      audio.play();
+    }
+  </script>
+    <script src="./main.js">
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
