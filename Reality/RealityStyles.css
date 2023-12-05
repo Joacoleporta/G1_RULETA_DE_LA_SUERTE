@@ -1,3 +1,333 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    font-family: Anonymous pro;
+}
+
+body {
+    background:url(Imagenes_Isaac/Background_2.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+color: white;
+font-size: 4vh;
+
+}
+.ruleta {
+    height: 40vh;
+    width: 40vh;
+    text-align: center;
+    align-items: center;
+    padding-top: 5vh;
+    opacity: 0.8;
+}
+
+.btn05 {
+    background: #157F6E;
+    clip-path: circle(49% at center);
+    cursor: pointer;
+    padding: 15px 3px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 34%;
+    left: 44%;
+    z-index: 1;
+
+}
+
+/* ROTACION IMAGEN*/
+
+.container-img {
+    position: relative;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagenRotativa {
+    width: 100%;
+    height: 100%;
+    animation: rotar 2s linear infinite;
+    transform-origin: 51.5% 43%;
+    /* Establece el punto de rotación en el centro de la imagen */
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* FIN ROTACION IMAGEN*/
+
+.container-resul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+#resultado {
+    color: #FFF;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+
+}
+
+#miDiv {
+
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+
+/*CARRUSEL*/
+
+
+.carrusel-sec {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+.container {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    border: solid 1px;
+
+    
+}
+.animation-container {
+    display: inline-block;
+    animation: moveImages linear infinite;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.animated-image {
+    margin-right: 10px;
+}
+
+.cont-img {
+    width: 50%;
+    height: auto;
+}
+
+/*FIN CARRUSEL*/
+.add-remove {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.add-remove input {
+
+    width: 100%;
+    font-size: x-large;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+}
+
+.container-list {
+    color: white;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.participantList {
+
+    border-radius: 10%;
+    background: rgba(21, 127, 110, 0.62);
+    color: white;
+    font-weight: bold;
+    margin: 5%;
+    padding: 2%;
+    color: #FFF;
+    font-weight: 700;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+li {
+    margin: 1%;
+}
+
+.inputs-buttons {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.inputs-buttons button {
+    width: 100%;
+    padding: 5%;
+    margin: 2%;
+    font-size: x-large;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+}
+#addElementInput,
+#removeElementInput {
+    width: 100%;
+    height: 6vh;
+    margin: 2%;
+    font-size: x-large;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+}
+.add-remove{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    height: 5vh;
+    margin: 10px 10px 20px 10px;
+}
+
+
+.btn-pill-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 5vh;
+ 
+}
+
+
+.one {
+    cursor: pointer;
+    border: none;
+    padding: 16px 45px;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 98px;
+    background: linear-gradient(1deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-top: 4vh;
+}
+
+button.one:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            green, darkred, darkgreen,
+            darkred, green, darkred,
+            darkgreen, darkred);
+    background-size: 1500%;
+    border-radius: 12px;
+    filter: blur(28px);
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.two {
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 98px;
+    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
+}
+
+button.two:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            green, darkred, darkgreen,
+            darkred, green, darkred,
+            darkgreen, darkred);
+    background-size: 1000%;
+    border-radius: 12px;
+    filter: blur(28px);
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
 
 
 
@@ -25,7 +355,7 @@
 
 
 
-@media only screen and (min-width: 968px) {
+ @media only screen and (min-width: 968px) {
     
     .tentacles {
         height: 75vh;
@@ -68,6 +398,7 @@
     .container-lista {
 
     }
+}
 
 
     
@@ -80,8 +411,8 @@
         display: flex;
         flex-direction: row;
     }
-     */
 
-
+    100% {
+        background-position: 0 0;
+    }
 }
-
