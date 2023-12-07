@@ -4,11 +4,21 @@ body {
   flex-direction: column;
   align-items: center;
   /*background: url('./imagenes/matrix_-_47802_1080p.mp4');*/
-  background-image: url('./imagenes/fondo\ home\ Matrix.jpeg');
+ /*background-image: url('./imagenes/fondo\ home\ Matrix.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
   margin-left: 50px;
   margin-buttom: 40%;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  width: 100vw; /* 100% del ancho de la ventana del navegador */
+  height: 160vh;
+  object-fit: cover;
 }
 
 figure{
@@ -165,52 +175,23 @@ button.btnblue:hover::before {
   }
 }
 
-.morfeo {
-  animation: morfeoAnimation 2s infinite;
-}
 
-.CHOICE {
-  animation: zoomIn 3s ease-in-out forwards;
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/*@media screen and (min-width: 880px) {
-
-  .container-botoms {
-    display: flex;
-    align-items: center;
-    flex-direction: row; /* Cambia a diseño de fila en pantallas más grandes
-    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos
-  }
-
-  .btnblue {
-    margin-top: 18px;
-  }
-
-  .morfeo {
-    display: flex;
-    align-items: center;
-    flex-direction: center
-   
-  }
-  .CHOICE {
-
-  }
-}*/
 
 @media screen and (min-width: 880px) {
 
-
   .morfeo {
-    width: 125%; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 250%; /* Ajusta el tamaño de la imagen según sea necesario */
+    animation: morfeoAnimation 2s infinite;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    width: 100vw; /* 100% del ancho de la ventana del navegador */
+    height: 275vh;
+    object-fit: cover;
   }
 
   .items {
@@ -223,19 +204,49 @@ button.btnblue:hover::before {
   .CHOICE {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 0; /* Ajusta el margen superior según sea necesario */
-  }
+    margin-top: auto; /* Ajusta el margen superior según sea necesario */
+    animation: zoomIn 3s ease-in-out forwards;
+    animation: zoomIn 3s ease-in-out forwards;
+    }
+    
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.1);
+      }
+      100% {
+        transform: scale(1.4);
+      }
+    }
 
   .container-botoms {
+    z-index: 2;
     flex-direction: row; /* Mantiene los botones en la misma línea */
   }
 
   .btnred {
     margin-bottom: 75%; /* Elimina el margen inferior del botón rojo */
     margin-right: 55px; /* Ajusta el espacio entre los botones según sea necesario */
+    width: 300px; 
+    height: 100px; 
+    font-size: 50px; 
   }
 
   .btnblue {
     margin-bottom: 75%; /* Elimina el margen inferior del botón azul */
+    width: 300px; 
+    height: 100px; 
+    font-size: 50px; 
+  }
+  .container-botoms {
+    position: absolute;
+    top: 90%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btnred,
+  .btnblue {
+    display: inline-block;
+    margin: 90px;
   }
 }
