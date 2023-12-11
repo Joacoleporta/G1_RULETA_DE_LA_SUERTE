@@ -10,14 +10,17 @@
 </head>
 <body onmouseover="playAudio()">
 
-  <canvas id="c"></canvas>
+  <canvas id="c" width="100" height="300">
+    
+  </canvas>
 
     <div class="CHOICE">
      <h2>CHOICE YOUR FUTURE</h2> 
     </div>
   <figure class="items">
     <img class="morfeo" src="./imagenes/Rectangle 5.png" alt="Imagen Morfeo">
-    <section class="container-botoms">
+  </figure>
+  <section class="container-botoms">
         <button class="btnred">
           <a href="Matrix.html">MATRIX</a>
         </button>
@@ -25,7 +28,7 @@
           <a href="Reality.html">REALITY</a>
         </button>
     </section>
-  </figure>
+ 
   <audio id="hoverAudio" src="./imagenes/The Matrix Resurrections.mp3"></audio>
   <script>
     function playAudio() {
