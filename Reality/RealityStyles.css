@@ -3,65 +3,111 @@
     margin: 0;
     font-family: Anonymous pro;
 }
-.participantes{
-color: white;
-text-align: center;
-margin:2% ;
-
-}
-.container-lista{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-}
 
 body {
-    background-image: url(imgDavid/FondoNuevo.png);
-
-   
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-a {
-    text-decoration: none;
-    color: azure;
+.ruleta {
+    height: 40vh;
+    width: 40vh;
+    text-align: center;
+    align-items: center;
+    padding-top: 5vh;
+    opacity: 0.8;
 }
 
-/*CARRUSEL DE IMAGENES*/
+.btn05 {
+    background: #157F6E;
+    clip-path: circle(49% at center);
+    cursor: pointer;
+    padding: 15px 3px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 34%;
+    left: 44%;
+    z-index: 1;
+
+}
+
 /* ROTACION IMAGEN*/
 
-.container-img{
+.container-img {
     position: relative;
     margin-top: 4vh;
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagenRotativa {
+    width: 100%;
+    height: 100%;
+    animation: rotate 2s linear infinite;
+    /* La animación dura 3 segundos y es infinita */
+    animation-play-state: paused;
+    transform-origin: 50% 43%;
+    /* La
+    /* Establece el punto de rotación en el centro de la imagen */
+}
+
+
+/* Estilo para la animación de la imagen */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
 
 }
-#imagenRotativa {
-  width: 100%;
-  height: 100%;
-  animation: rotar 2s linear infinite;
-  transform-origin: 51.5% 43%; /* Establece el punto de rotación en el centro de la imagen */
-}
-  
-  @keyframes rotar {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
 /* FIN ROTACION IMAGEN*/
+
+.container-resul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+#resultado {
+    color: #FFF;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+
+}
+
+#miDiv {
+
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+
+/*CARRUSEL*/
+
 
 .carrusel-sec {
     overflow: hidden;
     margin: 0;
     padding: 0;
-}
+    width: 100%;
 
-.container {
-    margin: 0;
 }
 
 .container {
@@ -70,81 +116,32 @@ a {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-}
+    border: solid 1px;
 
+
+}
 
 .animation-container {
     display: inline-block;
     animation: moveImages linear infinite;
     margin: 0;
-    margin: 0;
     padding: 0;
+
 
 }
 
 .animated-image {
-    width: 100px;
-    /* Ajusta el tamaño según tus necesidades */
-    height: auto;
-    margin-right: 20px;
-    /* Ajusta el espacio entre las imágenes según tus necesidades */
-}
-.centrado{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    width: 100%;
+    margin-right: 10px;
 }
 
-
-#miDiv{
-    text-align: center;
-    width: 100%;
-    /* Ajusta el tamaño según tus necesidades */
-    height: auto;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: 700;
-
-
-    /* Ajusta el espacio entre las imágenes según tus necesidades */
-}
-
-
-
-
-/*FIN CARRUSEL DE IMAGENES*/
-
-/*FORMULARIO*/
-
-.contenedor img {
+.cont-img {
     width: 50%;
     height: auto;
-
 }
 
-
-#addElementInput,
-#removeElementInput {
-    border-radius: 20px;
-    background: rgba(21, 127, 110, 0.62);
-    width: auto;
-    height: 5vh;
-    flex-shrink: 0;
-
-
-   
-
-
-}
-
-
-
-.add-remove{
+/*FIN CARRUSEL*/
+.add-remove {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     color: white;
     font-weight: bold;
@@ -153,50 +150,10 @@ a {
 
 }
 
-.botones {
-    display: flex;
-    flex-direction: row;
+.add-remove input {
 
-
-    font-weight: bold;
-    justify-content: space-evenly;
-}
-
-
-.botones .add{
-    width: 200%;
-    padding: 10% 2%;
-}
-.botones .remove{
-    width: 200%;
-    padding: 10% 2%;
-}
-
-
-#resultado {
-
-    color: #FFF;
-    text-align: center;
-    font-family: Anonymous Pro;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-
-#btnGenerar img {
-    width: auto;
-    height: auto;
-    padding: 0;
-    
-}
-
-button {
-    
     width: 100%;
-    padding: 5%;
-    font-size:x-large;
+    font-size: x-large;
     cursor: pointer;
     border: none;
     border-radius: 4px;
@@ -206,6 +163,25 @@ button {
     background: rgba(21, 127, 110, 0.62);
 }
 
+.container-list {
+    color: white;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.participantList {
+
+    border-radius: 10%;
+    background: rgba(21, 127, 110, 0.62);
+    color: white;
+    font-weight: bold;
+    margin: 5%;
+    padding: 2%;
+    color: #FFF;
+    font-weight: 700;
+
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -213,120 +189,57 @@ ul {
     list-style: none;
 }
 
-ul li {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
+li {
     margin: 1%;
 }
 
-.lista {
-   
+.inputs-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.inputs-buttons button {
+    width: 100%;
+    padding: 5%;
+    margin: 2%;
+    font-size: x-large;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
+}
+
+#addElementInput,
+#removeElementInput {
+    width: 100%;
+    margin: 2%;
+    font-size: x-large;
+    border: none;
+    border-radius: 4px;
     color: white;
+    border-radius: 20px;
+    background: rgba(21, 127, 110, 0.62);
+}
+
+.add-remove {
     font-weight: bold;
-    margin: 10%;
-    padding: 3%x;
-    color: #FFF;
-    font-weight: 700;
-
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-input {
-    color: white;
-    font-size: large;
 
-}
-
-/*FIN FORMULARIO*/
-
-
-.contenedor section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-    text-align: center;
-    font-family: Anonymous Pro;
-    font-size: 4vh;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 5%;
-}
-
-/* #move {
-    height: 40vh;
-    width: 40vh; 
-    transition: box-shadow .1s, transform;
-    background: url(Imagenes_Isaac/Tentaculos.png)
-        no-repeat
-        center;
-        background-size: cover;
-}
-
-#move:hover{
-    box-shadow: 0px 0px 50px rgba(0,0,0, 1);
-}
- */
-
- /* CONTENIDO */
-
-.tentacles {
-    background-image: url(Imagenes_Isaac/Tentaculos.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 40vh;
-    width: 40vh;
-    text-align: center;
-    align-items: center;
-    padding-top: 14vh;
-    
-    opacity: 0.8;
-}
-
-.personage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5%;
-}
-
-.items {
-    display: flex;
-    justify-content: center;
-    align-items: space-around;
-}
-
-/*  BUTTONS */
-
-footer {
+.btn-pill-container {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     margin-top: 5vh;
 }
 
-.btn05 {
-    background: #157F6E;
-    opacity: 0.7;
-    clip-path: circle(50% at center);
-    cursor: pointer;
-    border: none;
-    padding: 15px 3px;
-    color: #FFF;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-}
 
 .one {
     cursor: pointer;
@@ -387,7 +300,7 @@ button.one:hover::before {
     background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
     mix-blend-mode: plus-lighter;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    
+
 }
 
 button.two:hover::before {
@@ -398,10 +311,6 @@ button.two:hover::before {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg,
-            green, darkred, darkgreen,
-            darkred, green, darkred,
-            darkgreen, darkred);
     background: linear-gradient(45deg,
             green, darkred, darkgreen,
             darkred, green, darkred,
@@ -424,4 +333,8 @@ button.two:hover::before {
     100% {
         background-position: 0 0;
     }
+}
+
+a {
+    text-decoration: none;
 }
