@@ -8,8 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0;
-  height: 100vh;
-  overflow: hidden; /* Evita que el contenido sobresalga de la ventana */
+
   background: black;
   position: relative; /* Asegura que el canvas sea posicionado relativo al body */
 }
@@ -23,16 +22,7 @@ canvas {
   height: 100vh;
   object-fit: cover;
 }
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
-  width: 100vw; /* 100% del ancho de la ventana del navegador */
-  height: 160vh;
-  object-fit: cover;
-}
+
 
 figure{
   display: flex;
@@ -68,11 +58,12 @@ a {
 .container-botoms {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 23px;
   border-radius: 5px;
-  font-size: 20px;
+  margin-bottom: 200px;
+  
 }
 
 .btnred {
@@ -92,7 +83,8 @@ a {
   mix-blend-mode: plus-lighter;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   text-decoration: none;
-  margin-bottom: 6vh;
+  margin-bottom: 20px;
+
 }
 
 .btnblue {
@@ -111,7 +103,7 @@ a {
   background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 100%, rgba(41, 58, 211, 0.89) 100%, rgba(41, 58, 211, 0.64) 100%);
   mix-blend-mode: plus-lighter;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-  margin-bottom: 8vh;
+
   text-decoration: none;
 }
 
