@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url(Imagenes_Isaac/background8.jpg);
+    background: url(Imagenes_Isaac/background8\(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -25,6 +25,18 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+ 
+}
+h2{
+    color: rgb(21, 255, 0);
+    font-size: 30px;
+    font-weight: bolder;
+}
+h4{
+    color: rgb(21, 255, 0);
+    text-align: center;
+    margin-bottom: 5px;
+    
 }
 
 .ruleta {
@@ -50,9 +62,11 @@ h1 {
 
 
 p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 25px;
+    color: rgb(21, 255, 0);
+    font-weight: bolder;
+  
+
 }
 
 a {
@@ -74,23 +88,27 @@ a {
 }
 
 #imagenRotativa {
-    position: relative;
-    width: 60%;
-    height: 60%;
-    animation: rotar 2s linear infinite;
-    transform-origin: 51.5% 43%;
-    /* opacity: 0.5; */
+    width: 100%;
+    height: 100%;
+    animation: rotate 2s linear infinite;
+    /* La animación dura 3 segundos y es infinita */
+    animation-play-state: paused;
+    transform-origin: 50% 43%;
+    /* La
     /* Establece el punto de rotación en el centro de la imagen */
 }
 
-@keyframes rotar {
-    from {
+
+/* Estilo para la animación de la imagen */
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
     }
 
-    to {
-        transform: rotate(360deg);
+    100% {
+        transform: rotate(720deg);
     }
+
 }
 
 /* FIN ROTACION IMAGEN*/
@@ -100,8 +118,9 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     margin-top: 3%;
+    
 }
 
 #resultado {
@@ -121,6 +140,7 @@ a {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 2vh;
+
 }
 
 /*CARRUSEL*/
@@ -152,25 +172,30 @@ a {
     padding: 0;
 
 
+
 }
 
 .animated-image {
     margin-right: 10px;
 }
 
+
 .cont-img {
     width: 50%;
     height: auto;
+     margin-right: 10px;
 }
 
+
 /*FIN CARRUSEL*/
+
 .add-remove {
     display: flex;
-    justify-content: space-between;
-    color: white;
+    justify-content: space-evenly;
     font-weight: bold;
-    margin-left: 10px;
-    margin-right: 10px;
+    color: white;
+    width: 100%;
+    height: 5vh;
 
 }
 
@@ -181,18 +206,49 @@ a {
     border: none;
     border-radius: 4px;
     outline: none;
+   
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.62);
+    margin: 0 10px;
+    height: 80px;
+}
+
+
+.inputs-buttons {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    width: 100%;
+    height: 5vh;
+    margin-block: 70px;
+}
+
+.inputs-buttons button {
+    width: 100%;
+    font-size: x-large;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
     color: white;
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
+    margin: 0 10px;
+    height: 80px
 }
 
 .container-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
     color: white;
     text-align: center;
     margin-top: 3vh;
 }
 
 .participantList {
+    
+   height: 15vh;
     border-radius: 10%;
     background: rgba(21, 127, 110, 0.62);
     color: white;
@@ -214,47 +270,8 @@ li {
     margin: 1%;
 }
 
-.inputs-buttons {
-    display: flex;
-    flex-direction: row;
-    font-weight: bold;
-    width: 100%;
-}
 
-.inputs-buttons button {
-    width: 100%;
-    padding: 5%;
-    margin: 2%;
-    font-size: x-large;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    border-radius: 20px;
-    background: rgba(21, 127, 110, 0.62);
-}
 
-#addElementInput,
-#removeElementInput {
-    width: 100%;
-    height: 6vh;
-    margin: 2%;
-    font-size: x-large;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    border-radius: 20px;
-    background: rgba(21, 127, 110, 0.62);
-}
-
-.add-remove {
-    font-weight: bold;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 100%;
-    height: 5vh;
-    margin: 10px 10px 20px 10px;
-}
 
 /* ANTIGUA DOWN */
 .btn-pill-container {
@@ -328,6 +345,7 @@ button.one:hover::before {
     background: linear-gradient(1deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
     mix-blend-mode: plus-lighter;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
 
 }
 
@@ -407,6 +425,35 @@ button.two:hover::before {
         top: -7%;
     }
 
+    .add-remove {
+        display: flex;
+        justify-content: space-evenly;
+        font-weight: bold;
+        color: white;
+        width: 60%;
+        height: 5vh;
+    }
+    .inputs-buttons {
+        display: flex;
+        flex-direction: row;
+        font-weight: bold;
+        width: 60%;
+        height: 5vh;
+        margin-block: 70px;
+    }
+    
+    .inputs-buttons button {
+        width: 100%;
+        font-size: x-large;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        border-radius: 20px;
+        background: rgba(21, 127, 110, 0.62);
+        margin: 0 10px;
+        height: 80px
+    }
     .one {
         padding: 12px 30px;
     }
@@ -480,4 +527,4 @@ button.two:hover::before {
         line-height: normal;
         top: -7%;
     }
-} 
+}

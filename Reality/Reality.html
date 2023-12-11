@@ -12,22 +12,24 @@
 </head>
 
 <body>
-    <canvas id="canvas1"></canvas>
-    <!-- <audio controls autoplay loop src="sounds_Isaac/matrix-sound.mp3" type="audio/mp3"> -->
-    </audio>
     <section class="ruleta">
-        <h1>SPIN THE ROULETTE TO DISCOVER YOUR FUTURE</h1>
+        <h1>SPIN THE ROULLETTE TO DISCOVER YOUR FUTURE.</h1>
         <figure class="container-img">
-            <img src="Imagenes_Isaac/Tentaculos.png" id="imagenRotativa" alt="nave con tentaculos">
-            <button class="btn05" id="btnGenerar" onclick="mostrarDescripcionAleatoria(), toggleRotacion()">
-                ¡GO!
+            <img src="Imagenes_Isaac/Tentaculos.png" id="imagenRotativa">
+            <button class="btn05" id="btnGenerar" onclick="generarNombre(), mostrarDescripcionAleatoria()">
+                ¡SPIN!
             </button>
         </figure>
     </section>
+
+
     <div class="container-resul">
-        <h2 id="resultado"></h2>
+        <h2 id="nombreMostrado"></h2>
         <div id="miDiv"></div>
     </div>
+
+
+
     <section class="carrusel-sec">
         <div class="container">
             <div class="animation-container" id="animationContainer">
@@ -44,56 +46,73 @@
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 11.png" alt="Niobe">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 12.png" alt="Apoc">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 13.png" alt="Seraph">
-                <img class="animated-image" src="imgDavid/Personajes/Ellipse 14.png" alt="Agente Jones">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 14.png" alt="Jones">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 15.png" alt="The railway">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 16.png" alt="Spoonboy">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 17.png" alt="Smith">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 18.png" alt="Cypher">
-                <img class="animated-image" src="imgDavid/Personajes/Ellipse 19.png" alt="El oráculo">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 19.png" alt="Oracle">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 20.png" alt="Machine war">
-                <img class="animated-image" src="imgDavid/Personajes/Ellipse 21.png" alt="El arquitecto">
+                <img class="animated-image" src="imgDavid/Personajes/Ellipse 21.png" alt="The architect">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 22.png" alt="Persephone">
                 <img class="animated-image" src="imgDavid/Personajes/Ellipse 23.png" alt="Merovingio">
             </div>
         </div>
     </section>
-    <img class="cont-img" src="" />
-    <div class="resultado ">
-        <div id="resultadoContenedor"></div>
-    </div>
+    <section>
+        <img class="cont-img" src="" />
+        <div class="resultado ">
+            <div id="resultadoContenedor"></div>
+        </div>
+    </section>
+
+
+        <h4>WRITE HERE THE NAMES YOU WANT <br> TO ADD OR REMOVE</h4>
+
     <form id="modifyArrayForm  " class="add-remove">
-        <input type="text" id="addElementInput">
-        <input type="text" id="removeElementInput">
-
+        <input type="text" id="nombreNuevo" placeholder=" Add">
+        <input type="text" id="nombreEliminar" placeholder=" Remove">
     </form>
-
     <div class="inputs-buttons">
-        <button type="button" onclick="addElement()">ADD</button>
-        <button type="button" onclick="removeElement()">REMOVE</button>
+        <button type="button" onclick="agregarNombre()">ADD</button>
+        <button type="button" onclick="eliminarNombre()">REMOVE</button>
     </div>
+
     <div class="container-list">
-        <div class="participantes">
-            <h2>PARTICIPANTS</h2>
-        </div>
+        <h2>REMAINING PARTICIPANTS</h2>
         <div class="participantList">
-            <ul id="nameList"></ul>
+
+            <ul id="nombresRestantes"></ul>
         </div>
+        <h2>ALREDY TAKEN</h2>
+
+        <div class="participantList">
+            <ul id="nombresSalidos"></ul>
+        </div>
+
+
+
+
     </div>
 
     <section class="btn-pill-container">
 
         <button class="one" id="boton1">
-            <a href="">Reboot</a>
+            <a href="Reality.html">REBOOT</a>
         </button>
 
 
         <button class="two" id="boton2">
-            <a href="">Start</a>
+            <a href="../index.html">HOME</a>
         </button>
 
 
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
     <script src="Realityjs.js"></script>
+
 </body>
 
 </html>
