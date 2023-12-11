@@ -1,14 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Anonymous Pro;
+  font-family: "Anonymous Pro", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*background: url('./imagenes/matrix_-_47802_1080p.mp4');*/
- /*background-image: url('./imagenes/fondo\ home\ Matrix.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;*/
-  margin-left: 50px;
-  margin-buttom: 40%;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Evita que el contenido sobresalga de la ventana */
+  background: black;
+  position: relative; /* Asegura que el canvas sea posicionado relativo al body */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 video {
   position: absolute;
