@@ -89,24 +89,18 @@
   
   function eliminarNombre() {
     var nombreEliminar = document.getElementById("nombreEliminar").value.trim();
-    var indexEliminar = nombres.indexOf(nombreEliminar);
-  
+    var indexEliminar = nombresNoRepetidos.indexOf(nombreEliminar);
     if (indexEliminar !== -1) {
-        nombres.splice(indexEliminar, 1);
-        nombresNoRepetidos = [...nombres]; // Utiliza el operador de propagación para crear una copia
-  
-        // Eliminar el nombre de la lista de nombres generados
-        var indexGenerado = nombresGenerados.indexOf(nombreEliminar);
-  
-        if (indexGenerado !== -1) {
-            nombresGenerados.splice(indexGenerado, 1);
-        }
-  
-        document.getElementById("nombreEliminar").value = "";
-  
-        // Actualizar la lista de nombres restantes
-        actualizarListas();
+      // Si el nombre está en la lista no repetida, eliminarlo
+      nombresNoRepetidos.splice(indexEliminar, 1);
     }
+
+    // Mover el nombre al array de nombres eliminados
+    nombresEliminados.push(nombreEliminar);
+    document.getElementById("nombreEliminar").value = "";
+
+    // Actualizar la lista de nombres restantes y salidos
+    actualizarListas();
   }
   // Función para actualizar las listas de nombres restantes y salidos
   function actualizarListas() {
