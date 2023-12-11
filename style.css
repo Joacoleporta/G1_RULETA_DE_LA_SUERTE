@@ -267,16 +267,7 @@ button.btnblue:hover::before {
     width: 170%; /* Ajusta el tamaño de la imagen según sea necesario */
     animation: morfeoAnimation 2s infinite;
   }
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -1;
-    width: 100vw; /* 100% del ancho de la ventana del navegador */
-    height: 275vh;
-    object-fit: cover;
-  }
+ 
 
   .items {
     margin: auto; /* Centra la imagen horizontalmente */
@@ -322,7 +313,7 @@ button.btnblue:hover::before {
   }
   .container-botoms {
     position: absolute;
-    top: 90%;
+   
     left: 51%;
     transform: translate(-50%, -50%);
   }
@@ -330,6 +321,6 @@ button.btnblue:hover::before {
   .btnred,
   .btnblue {
     display: inline-block;
-    margin: 90px;
+
   }
 }
