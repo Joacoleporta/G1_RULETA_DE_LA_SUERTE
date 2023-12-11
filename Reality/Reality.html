@@ -8,29 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-
     <title>Reality</title>
 </head>
 
 <body>
+    <canvas id="canvas1"></canvas>
+    <!-- <audio controls autoplay loop src="sounds_Isaac/matrix-sound.mp3" type="audio/mp3"> -->
+    </audio>
     <section class="ruleta">
-        <h1>SPIN THE ROULETTE TO DISCOVER YOUR FUTURE.</h1>
+        <h1>SPIN THE ROULETTE TO DISCOVER YOUR FUTURE</h1>
         <figure class="container-img">
-            <img src="Imagenes_Isaac/Tentaculos.png" id="imagenRotativa">
+            <img src="Imagenes_Isaac/Tentaculos.png" id="imagenRotativa" alt="nave con tentaculos">
             <button class="btn05" id="btnGenerar" onclick="mostrarDescripcionAleatoria(), toggleRotacion()">
                 ¡GO!
             </button>
         </figure>
     </section>
-
-
     <div class="container-resul">
         <h2 id="resultado"></h2>
         <div id="miDiv"></div>
     </div>
-
-
-
     <section class="carrusel-sec">
         <div class="container">
             <div class="animation-container" id="animationContainer">
@@ -60,49 +57,44 @@
             </div>
         </div>
     </section>
+    <img class="cont-img" src="" />
+    <div class="resultado ">
+        <div id="resultadoContenedor"></div>
+    </div>
+    <form id="modifyArrayForm  " class="add-remove">
+        <input type="text" id="addElementInput">
+        <input type="text" id="removeElementInput">
 
+    </form>
 
-        <img class="cont-img" src="" />
-        <div class="resultado ">
-            <div id="resultadoContenedor"></div>
+    <div class="inputs-buttons">
+        <button type="button" onclick="addElement()">ADD</button>
+        <button type="button" onclick="removeElement()">REMOVE</button>
+    </div>
+    <div class="container-list">
+        <div class="participantes">
+            <h2>PARTICIPANTS</h2>
         </div>
+        <div class="participantList">
+            <ul id="nameList"></ul>
+        </div>
+    </div>
+
+    <section class="btn-pill-container">
+
+        <button class="one" id="boton1">
+            <a href="">Reboot</a>
+        </button>
 
 
-    
-        <form id="modifyArrayForm  " class="add-remove">
-            <input type="text" id="addElementInput">
-    
-            <input type="text" id="removeElementInput">
-    
-        </form>
-    
-        <div class="inputs-buttons">
-            <button type="button" onclick="addElement()">ADD</button>
-            <button type="button" onclick="removeElement()">REMOVE</button>
-        </div>
-        <div class="container-list">
-            <div class="participantes">
-                <h2>PARTICIPANTS</h2>
-            </div>
-            <div class="participantList">
-                <ul id="nameList"></ul>
-            </div>
-        </div>
-    
-        <section class="btn-pill-container">
-    
-            <button class="one">
-                <a href="">Start</a>
-            </button>
-    
-    
-            <button class="two">
-                <a href="">Reboot</a>
-            </button>
-    
-    
-        </section>
-        <script src="Realityjs.js"></script>
+        <button class="two" id="boton2">
+            <a href="">Start</a>
+        </button>
+
+
+    </section>
+    <script src="Realityjs.js"></script>
 </body>
 
 </html>
+

@@ -2,58 +2,84 @@
 * {
     margin: 0;
     font-family: Anonymous pro;
+
 }
 
 body {
-    background:url(Imagenes_Isaac/Background_2.png);
+    background: url(Imagenes_Isaac/background8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-h1{
-color: white;
-font-size: 4vh;
 
-}
-.ruleta {
-    height: 40vh;
-    width: 40vh;
+h1 {
+    margin-top: 10%;
+    color: 05F926;
     text-align: center;
+    font-size: 45px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding-top: 5vh;
-    opacity: 0.8;
+}
+
+.ruleta {
+    display: flex;
+    flex-direction: column;   
 }
 
 .btn05 {
-    background: #157F6E;
-    clip-path: circle(49% at center);
-    cursor: pointer;
-    padding: 15px 3px;
-    color: #FFF;
-    font-size: 24px;
-    font-weight: bold;
     position: absolute;
-    top: 34%;
-    left: 44%;
+    background: #157F6E;
+    clip-path: circle(10% at center);
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.8;
+    cursor: pointer;
     z-index: 1;
-
+    top: -7%;
 }
+
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+
 
 /* ROTACION IMAGEN*/
 
 .container-img {
     position: relative;
-    margin-top: 4vh;
+    margin-top: 2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #imagenRotativa {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    width: 60%;
+    height: 60%;
     animation: rotar 2s linear infinite;
     transform-origin: 51.5% 43%;
+    /* opacity: 0.5; */
     /* Establece el punto de rotación en el centro de la imagen */
 }
 
@@ -75,7 +101,7 @@ font-size: 4vh;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 3%;
 }
 
 #resultado {
@@ -105,18 +131,20 @@ font-size: 4vh;
     margin: 0;
     padding: 0;
     width: 100%;
-    
+
 }
+
 .container {
     margin: 0;
     padding: 0;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    border: solid 1px;
 
-    
+
+
 }
+
 .animation-container {
     display: inline-block;
     animation: moveImages linear infinite;
@@ -147,7 +175,6 @@ font-size: 4vh;
 }
 
 .add-remove input {
-
     width: 100%;
     font-size: x-large;
     cursor: pointer;
@@ -166,7 +193,6 @@ font-size: 4vh;
 }
 
 .participantList {
-
     border-radius: 10%;
     background: rgba(21, 127, 110, 0.62);
     color: white;
@@ -175,7 +201,6 @@ font-size: 4vh;
     padding: 2%;
     color: #FFF;
     font-weight: 700;
-
 }
 
 ul {
@@ -193,7 +218,6 @@ li {
     display: flex;
     flex-direction: row;
     font-weight: bold;
-    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -205,11 +229,11 @@ li {
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    outline: none;
     color: white;
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
 }
+
 #addElementInput,
 #removeElementInput {
     width: 100%;
@@ -222,7 +246,8 @@ li {
     border-radius: 20px;
     background: rgba(21, 127, 110, 0.62);
 }
-.add-remove{
+
+.add-remove {
     font-weight: bold;
     margin-left: 10px;
     margin-right: 10px;
@@ -231,29 +256,30 @@ li {
     margin: 10px 10px 20px 10px;
 }
 
-
+/* ANTIGUA DOWN */
 .btn-pill-container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
-    margin-top: 5vh;
- 
+
 }
 
 
 .one {
     cursor: pointer;
     border: none;
+    width: 100%;
     padding: 16px 45px;
-    color: azure;
+    color: white;
     font-size: 24px;
     font-weight: bold;
     position: relative;
+    margin: 10%;
     border-radius: 98px;
-    background: linear-gradient(1deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
     mix-blend-mode: plus-lighter;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    margin-top: 4vh;
+
 }
 
 button.one:hover::before {
@@ -291,16 +317,18 @@ button.one:hover::before {
 .two {
     cursor: pointer;
     border: none;
-    padding: 16px 32px;
-    color: white;
+    width: 100%;
+    padding: 16px 45px;
+    color: azure;
     font-size: 24px;
     font-weight: bold;
     position: relative;
+    margin: 10%;
     border-radius: 98px;
-    background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
+    background: linear-gradient(1deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
     mix-blend-mode: plus-lighter;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    
+
 }
 
 button.two:hover::before {
@@ -322,6 +350,7 @@ button.two:hover::before {
 }
 
 @keyframes glowing {
+
     0% {
         background-position: 0 0;
     }
@@ -329,12 +358,126 @@ button.two:hover::before {
     50% {
         background-position: 400% 0;
     }
+}
 
-    100% {
-        background-position: 0 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 720px) {
+
+    h1 {
+        margin-top: 0.1%;
+        width: 767px;
+        height: 274px;  
+        
+        
+    }
+
+    #imagenRotativa {
+        margin-top: 0.1%;
+        width:  70%;
+        height: 70%; 
+    }
+
+    .btn05 {
+        font-size: 46px;
+        top: -7%;
+    }
+
+    .one {
+        padding: 12px 30px;
+    }
+
+    .two {
+        padding: 12px 40px;
+    }
+
+    a {
+        font-size: 100%;
     }
 }
-a {
-    text-decoration: none;
-    color:white
+
+
+
+@media only screen and (min-width: 992px) {
+
+    h1 {
+        margin-top: 0.1%;
+    }
+
+    #imagenRotativa {
+        width:  70%;
+        height:  70%; 
+        transform: rotate(-0.502deg);
+        flex-shrink: 0;
+    }
+
+    .btn-pill-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 100%;
+    }
+    
+    .btn05 {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        top: -7%;
+    }
 }
+
+ @media only screen and (min-width: 1440px) {
+
+    h1 {
+      margin-top: 0.1%;
+    }
+
+    #imagenRotativa {
+        width:  60%;
+        height:  60%;
+        transform: rotate(-0.502deg);
+        flex-shrink: 0;
+    }
+
+    .btn05 {
+        
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        top: -7%;
+    }
+} 
