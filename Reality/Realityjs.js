@@ -110,6 +110,7 @@ const nombres = ["Max", "Alicia", "Jose", "Mercedes", "Jander", "Yessi", "Anzu",
 const btnGenerar = document.getElementById("btnGenerar");
 const resultado = document.getElementById("resultado");
 
+
 btnGenerar.addEventListener("click", function () {
 
   const nombreAleatorio = obtenerNombreAleatorio(nombres);
@@ -228,24 +229,26 @@ function toggleRotacion() {
 
 
 
-/* var sound1 = new Audio();
-sound1.src = "sounds/sound2.mp3"; */
 
-/* // Variable para almacenar el sonido actual
-var sonidoActual;
+// Variable para almacenar el sonido actual
+let sonidoActual;
 
 // Objeto que contiene funciones de sonido para cada botón
-var sonidos = {
-  start: function() {
+let sonidos = {
+  boton1: function () {
     // Reproduce el sonido correspondiente al botón 1
     sonidoActual = new Audio('sounds/sound2.mp3');
     sonidoActual.play();
   },
   // Puedes agregar más funciones de sonido para otros botones aquí
-  reboot: function() {
+  boton2: function () {
     sonidoActual = new Audio('sounds/sound1.mp3')
     sonidoActual.play();
   }
+  /*  btnGenerar: function () {
+     sonidoActual = new Audio('sounds/sound3.mp3')
+     sonidoActual.play();
+   } */
 };
 
 // Función para detener el sonido cuando el puntero del mouse sale del botón
@@ -255,4 +258,15 @@ function detenerSonido() {
     sonidoActual.pause();
     sonidoActual.currentTime = 0;
   }
-}  */
+}
+
+// Asocia las funciones de sonido a los eventos de los botones mediante JavaScript
+document.getElementById('boton1').addEventListener('mouseover', sonidos.boton1);
+document.getElementById('boton1').addEventListener('mouseout', detenerSonido);
+
+document.getElementById('boton2').addEventListener('mouseover', sonidos.boton2);
+document.getElementById('boton2').addEventListener('mouseout', detenerSonido);
+
+/* document.getElementById('btnGenerar').addEventListener('mouseover', sonidos.btnGenerar);
+document.getElementById('btnGenerar').addEventListener('mouseout', detenerSonido); */
+
