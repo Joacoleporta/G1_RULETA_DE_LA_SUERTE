@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Anonymous Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Evita que el contenido sobresalga de la ventana */
+  background: black;
+  position: relative; /* Asegura que el canvas sea posicionado relativo al body */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  width: 100vw; /* 100% del ancho de la ventana del navegador */
+  height: 160vh;
+  object-fit: cover;
+}
+
+figure{
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: azure;
+}
+
+.morfeo {
+  opacity: 0.8;
+}
+
+.CHOICE {
+  color: rgb(229, 225, 225);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Otra opción puede ser 'space-around' según tus necesidades */
+  align-items: center;
+  text-align: center;
+  margin-top: 15%;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.container-botoms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.btnred {
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  padding: 16px 45px;
+  color: azure;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 98px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
+  mix-blend-mode: plus-lighter;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  text-decoration: none;
+  margin-bottom: 6vh;
+}
+
+.btnblue {
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  padding: 16px 45px;
+  color: azure;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 98px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 100%, rgba(41, 58, 211, 0.89) 100%, rgba(41, 58, 211, 0.64) 100%);
+  mix-blend-mode: plus-lighter;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  margin-bottom: 8vh;
+  text-decoration: none;
+}
+
+button.btnred:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      green, darkred, darkgreen,
+      darkred, green, darkred,
+      darkgreen, darkred);
+  background-size: 1500%;
+  border-radius: 12px;
+  filter: blur(28px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+button.btnblue:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      green, darkred, darkgreen,
+      darkred, green, darkred,
+      darkgreen, darkred);
+  background-size: 1500%;
+  border-radius: 12px;
+  filter: blur(28px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes morfeoAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+@media screen and (min-width: 880px) {
+
+  .morfeo {
+    width: 250%; /* Ajusta el tamaño de la imagen según sea necesario */
+    animation: morfeoAnimation 2s infinite;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    width: 100vw; /* 100% del ancho de la ventana del navegador */
+    height: 275vh;
+    object-fit: cover;
+  }
+
+  .items {
+    margin: auto; /* Centra la imagen horizontalmente */
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+  } 
+  
+  .CHOICE {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto; /* Ajusta el margen superior según sea necesario */
+    animation: zoomIn 3s ease-in-out forwards;
+    animation: zoomIn 3s ease-in-out forwards;
+    }
+    
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.1);
+      }
+      100% {
+        transform: scale(1.4);
+      }
+    }
+
+  .container-botoms {
+    z-index: 2;
+    flex-direction: row; /* Mantiene los botones en la misma línea */
+  }
+
+  .btnred {
+    margin-bottom: 75%; /* Elimina el margen inferior del botón rojo */
+    margin-right: 55px; /* Ajusta el espacio entre los botones según sea necesario */
+    width: 300px; 
+    height: 100px; 
+    font-size: 50px; 
+  }
+
+  .btnblue {
+    margin-bottom: 75%; /* Elimina el margen inferior del botón azul */
+    width: 300px; 
+    height: 100px; 
+    font-size: 50px; 
+  }
+  .container-botoms {
+    position: absolute;
+    top: 90%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btnred,
+  .btnblue {
+    display: inline-block;
+    margin: 90px;
+  }
+}
