@@ -10,13 +10,19 @@ body {
     color:white;
   }
 
-header {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 22px;
-    }
+    .you {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 30px;
+        animation: zoomIn 3s ease-in-out forwards;
+        width: 100%;
+      }
+      @keyframes zoomIn {
+        0% { transform: scale(0.1); }
+        100% { transform: scale(1); }
+      }
 
-.heard {
+.familiar {
     font-size: 4vh;
     position:absolute;
     left:50%;
@@ -25,10 +31,12 @@ header {
     transform: translate(-50%, -50%);
     font-weight: bold;
     width: 100%;
+    white-space: pre-line; /* Permite saltos de línea */
     }
+    
 
 
-.pildoras{
+.container-botoms{
     position: absolute;
     top: 85%;
     left: 50%;
@@ -41,7 +49,7 @@ header {
     border-radius: 5px;
     font-size: 20px;
 }
-.pil-azul {
+.btnblue {
     background: blue;
     cursor: pointer;
     border: none;
@@ -54,11 +62,12 @@ header {
     background: linear-gradient(180deg, rgba(41, 58, 211, 0.76) 0%, rgba(41, 58, 211, 0.89) 50.52%, rgba(41, 58, 211, 0.64) 100%);
     mix-blend-mode: plus-lighter;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-top: 4vh;
     text-decoration: none;
     
 }
 
-.pil-roja {
+.btnred {
     background: red;
     cursor: pointer;
     border: none;
@@ -67,7 +76,6 @@ header {
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border-radius: 30px;
     border-radius: 98px;
     background: linear-gradient(180deg, rgba(255, 0, 0, 0.76) 0%, rgba(255, 0, 0, 0.89) 50.52%, rgba(255, 0, 0, 0.64) 100%);
     mix-blend-mode: plus-lighter;
@@ -75,3 +83,102 @@ header {
     margin-top: 4vh;
     text-decoration: none;
 }
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+button.btnblue:hover::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg,
+    green, darkred, darkgreen,
+    darkred, green, darkred,
+    darkgreen, darkred);
+    background-size: 1500%;
+    border-radius: 12px;
+    filter:blur(28px);
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+button.btnred:hover::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg,
+    green, darkred, darkgreen,
+    darkred, green, darkred,
+    darkgreen, darkred);
+    background-size: 1500%;
+    border-radius: 12px;
+    filter:blur(28px);
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+    @media screen and (min-width: 720px) {
+        body {
+            background-clip: content-box; /* Puedes experimentar con otras opciones como padding-box o border-box */
+          }
+        .container-botoms {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    
+        .btnblue {
+            margin-right: 100px; /* Puedes ajustar el valor según sea necesario */
+        }
+    
+        .familiar {
+            white-space: nowrap;
+        }
+    }
+
+    @media screen and (min-width: 1440px){
+        
+    }
+
+
+
+   
+
+
