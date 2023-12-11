@@ -196,7 +196,7 @@ function obtenerNombreAleatorio(array) {
 
     // Añade la descripción al div
     const descripcionElement = document.createElement('p');
-    descripcionElement.textContent = `You got assigned this character: ${descripcion}`;
+    descripcionElement.textContent = `${descripcion} You got assigned this character`;
     document.getElementById('miDiv').appendChild(descripcionElement);
 
     // Añade la imagen como un elemento img al div
