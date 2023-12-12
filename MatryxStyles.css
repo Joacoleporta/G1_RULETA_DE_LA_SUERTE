@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(/imagenes/No_reality.jpg); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ubicación de tu imagen */
+    background-image: url(./imagenes/1440_px_screen3.svg); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ubicación de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
