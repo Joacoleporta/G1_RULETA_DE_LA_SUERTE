@@ -23,7 +23,7 @@
   
   animateImages(performance.now());
   
-  const nombres = ["Roxana","Elena"];
+  const nombres = ["Roxana","Elena", "Joaco", "Jander","Alicia", "Yessi", "Denisse"];
   let nombresNoRepetidos = [...nombres];
   let nombresEliminados = [];
   let nombresSalidos = [];
